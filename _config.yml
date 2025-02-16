@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: ko
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -26,10 +26,10 @@ description: >- # used by seo meta and the atom feed
 url: "https://gayoung5.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: gayoung5 # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+#twitter:
+#  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -88,7 +88,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: dark # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
