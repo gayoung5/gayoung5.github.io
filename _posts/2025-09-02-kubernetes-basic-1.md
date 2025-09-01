@@ -10,7 +10,7 @@ description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes �
 ---
 # kubernetes basic
 ## node architecture
-![node_architecture.png](node_architecture.png)
+<img width="1416" height="645" alt="Image" src="https://github.com/user-attachments/assets/3ffb6254-83d6-4056-99a2-e4c4180c9474" />
 * kubelet: pod를 실행
 * iptables: 노드간 통신, 리눅스 방화벽, 트래빅 라우팅
 * 컨테이너끼리 통신이 쉬움, 포트 번호만 알면 가능
