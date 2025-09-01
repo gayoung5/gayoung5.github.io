@@ -6,7 +6,7 @@ tags:
   - k8s
   - devops
 author: gayoungoh
-description: k8s study based on udemy class(DevOps (데브옵스) : Kubernetes 완전 정복)
+description: k8s study based on udemy class`(DevOps (데브옵스) : Kubernetes 완전 정복)`
 ---
 # kubernetes basic
 ## node architecture
