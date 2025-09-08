@@ -38,7 +38,7 @@ kubectl describe pod ${PODNAME}
   * 해당 섹션 안에 상태값에 대한 정보 포함됨
 
 ### pod lifecycle
-<img width="842" height="420" alt="Image" src="https://github.com/user-attachments/assets/cec33807-0849-42f0-9eb0-b27b2440b6fc" />
+* <img width="842" height="420" alt="Image" src="https://github.com/user-attachments/assets/cec33807-0849-42f0-9eb0-b27b2440b6fc" />
 * pre stop hook: pod가 중지될 때 실행하는 것
 
 ## secret
