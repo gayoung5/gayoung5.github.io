@@ -20,7 +20,7 @@ description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes �
 * key-value 쌍으로 이루이진 형태
 * 어플리케이션이 구성 파일로 예상하는 볼륨을 사용해서 이 파일을 마운트할 수 있음
 * 이미지는 변경하지 않고 설정값만 변경 가능
-```
+``` bash
 cat <<EOF > app.properties
 driver=jdbc
 database=postgres
@@ -49,7 +49,7 @@ kubectl create configmap app-config --from-file=app.properties
 * stateless 상태의 앱을 활용하면 컨테이너 중지 시 모든 데이터가 사라짐
 * AWS 클라우드에서는 EBS를 활용, 아예 노드 외부에 있는 스토리지를 활용 가능 -> 클라우드를 활용하는 가장 좋은 점
 
-```
+```bash
 // AWS 볼륨 생성
 aws ec2 create-volume --size 10 --region eu-west-1 --availability-zone eu-west-1a --volume-type gp2 --tag-specifications 'ResourceType=volume, Tags=[{Key=KubernetesCluster, Value=<kubernetes_name>}]'
 
@@ -59,7 +59,7 @@ kubernetes create -f <<volumes_test.yaml>>
 
 ### volumes provisioning
 * storageclass 객체를 사용해서 볼륨 프로비저닝을 할 수 있음
-``` yaml
+```yaml
 kind: StarageClass
 apiVersion: storage.k8s.io/v1beta1
 metadata:
