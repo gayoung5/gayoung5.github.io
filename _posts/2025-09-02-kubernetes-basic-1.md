@@ -1,10 +1,7 @@
 ---
 date: 2025-09-02 00:20:00 +0900
-categories:
-  - k8s
-tags:
-  - k8s
-  - devops
+categories: [k8s]
+tags: [k8s, devops]
 author: gayoungoh
 description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes 완전 정복)`
 ---
