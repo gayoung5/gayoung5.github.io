@@ -20,6 +20,7 @@ description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes �
 * key-value 쌍으로 이루이진 형태
 * 어플리케이션이 구성 파일로 예상하는 볼륨을 사용해서 이 파일을 마운트할 수 있음
 * 이미지는 변경하지 않고 설정값만 변경 가능
+* 
 ```
 cat <<EOF > app.properties
 driver=jdbc
