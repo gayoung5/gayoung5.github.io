@@ -1,33 +1,31 @@
 ---
+title: kubernetes advanced 2
 date: 2025-09-17 18:30:00 +0900
-categories:
-  - k8s
-tags:
-  - k8s
-  - devops
+categories: [k8s]
+tags: [k8s, devops]
 author: gayoungoh
 description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes 완전 정복)`
 ---
 # kubernetes advanced
 ## pod presets
 * 런타임 중에 파드에 정보를 넣어줄 수 있음 (시크릿, 컨피그맵, 볼륨, 환경변수 등)
-```yaml
-apiVersion: settings.k8s.io/v1alpha1
-kind: PodPreset
-spec:
-  selector:
-    matchLabels:
-      app: myapp # matchlabel이 맞으면 아래 내용이 다 적용됨
-  env:
-    - name: MY_SECRET
-      value: "123456"
-  volumeMounts:
-    - mountPath: /share
-      name: share-volume
-  volumes:
-    - name: share-volume
-      emptyDir: {}
-```
+    ```yaml
+    apiVersion: settings.k8s.io/v1alpha1
+    kind: PodPreset
+    spec:
+      selector:
+        matchLabels:
+          app: myapp # matchlabel이 맞으면 아래 내용이 다 적용됨
+      env:
+        - name: MY_SECRET
+          value: "123456"
+      volumeMounts:
+        - mountPath: /share
+          name: share-volume
+      volumes:
+        - name: share-volume
+          emptyDir: {}
+    ```
 * 충돌이 생기면 pod에 적용되지 않음
 * 0개 이상의 pod에 적용할 수 있음
   * 현재 적용되는 pod가 없더라도 이후에 적용되는 pod가 생길 수도 있음
