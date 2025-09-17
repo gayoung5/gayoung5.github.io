@@ -20,7 +20,6 @@ description: k8s study based on udemy class`(DevOps (데브옵스) Kubernetes �
 * key-value 쌍으로 이루이진 형태
 * 어플리케이션이 구성 파일로 예상하는 볼륨을 사용해서 이 파일을 마운트할 수 있음
 * 이미지는 변경하지 않고 설정값만 변경 가능
-* 
 ```
 cat <<EOF > app.properties
 driver=jdbc
@@ -32,6 +31,7 @@ EOF
 
 kubectl create configmap app-config --from-file=app.properties
 ```
+
 * 컨피그맵을 사용하면 구성 파일을 삽입해서 어플리케이션 내에서 구성 데이터를 더할 수 있음
 
 ## ingress
@@ -48,6 +48,7 @@ kubectl create configmap app-config --from-file=app.properties
 * 컨테이너 외부에 데이터를 저장하기 위해서 쿠버네티스 볼륨을 활용
 * stateless 상태의 앱을 활용하면 컨테이너 중지 시 모든 데이터가 사라짐
 * AWS 클라우드에서는 EBS를 활용, 아예 노드 외부에 있는 스토리지를 활용 가능 -> 클라우드를 활용하는 가장 좋은 점
+
 ```
 // AWS 볼륨 생성
 aws ec2 create-volume --size 10 --region eu-west-1 --availability-zone eu-west-1a --volume-type gp2 --tag-specifications 'ResourceType=volume, Tags=[{Key=KubernetesCluster, Value=<kubernetes_name>}]'
